@@ -1,16 +1,16 @@
-<html lang="en-us"><script src="{{cookiecutter.cdn}}pythons.js" type=module id="site" data-python="cpython{{cookiecutter.PYBUILD}}" data-os="vtx,fs,snd,gui" async defer>#<!--
+<html lang="en-us"><script src="https://pygame-web.github.io/archives/0.8/pythons.js" type=module id="site" data-python="cpython3.11" data-os="vtx,fs,snd,gui" async defer>#<!--
 
 print("""
-Loading {{cookiecutter.title}} from {{cookiecutter.archive}}.apk
-    Pygbag Version : {{cookiecutter.version}}
+Loading tictactoe-with-pygame from tictactoe-with-pygame.apk
+    Pygbag Version : 0.8.4
     Template Version : 0.8.3
-    Python  : {{cookiecutter.PYBUILD}}
-    CDN URL : {{cookiecutter.cdn}}
+    Python  : 3.11
+    CDN URL : https://pygame-web.github.io/archives/0.8/
     Screen  : {{cookiecutter.width}}x{{cookiecutter.height}}
-    Title   : {{cookiecutter.title}}
-    Folder  : {{cookiecutter.directory}}
-    Authors : {{cookiecutter.authors}}
-    SPDX-License-Identifier: {{cookiecutter.spdx}}
+    Title   : tictactoe-with-pygame
+    Folder  : tictactoe-with-pygame
+    Authors : pgw
+    SPDX-License-Identifier: cookiecutter.spdx
 
 """)
 
@@ -84,12 +84,12 @@ async def custom_site():
 
 
 
-    apk = "{{cookiecutter.archive}}.apk"
+    apk = "tictactoe-with-pygame.apk"
 
-    bundle = "{{cookiecutter.archive}}"
+    bundle = "tictactoe-with-pygame"
 
     # the C or js loader could do that but be explicit.
-    appdir = Path(f"/data/data/{bundle}") # /data/data/{{cookiecutter.archive}}
+    appdir = Path(f"/data/data/{bundle}") # /data/data/tictactoe-with-pygame
     appdir.mkdir()
 
 
@@ -233,22 +233,22 @@ asyncio.run( custom_site() )
 // this dict is available under PyConfig.config from __main__
 
 config = {
-    xtermjs : "{{cookiecutter.xtermjs}}" ,
+    xtermjs : "1" ,
     _sdl2 : "canvas",
     user_canvas : 0,
     user_canvas_managed : 0,
-    ume_block : {{cookiecutter.ume_block}},
-    can_close : {{cookiecutter.can_close}},
-    archive : "{{cookiecutter.archive}}",
+    ume_block : 1,
+    can_close : 0,
+    archive : "tictactoe-with-pygame",
     gui_debug : 3,
-    cdn : "{{cookiecutter.cdn}}",
-    autorun : {{cookiecutter.autorun}},
-    PYBUILD : "{{cookiecutter.PYBUILD}}"
+    cdn : "https://pygame-web.github.io/archives/0.8/",
+    autorun : 0,
+    PYBUILD : "3.11"
 }
 
 </script>
 
-    <title>{{cookiecutter.title}}</title>
+    <title>tictactoe-with-pygame</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -256,10 +256,10 @@ config = {
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
 
-    <link rel="prefetch" href="{{cookiecutter.cdn}}pythonrc.py">
-    <link rel="prefetch" href="{{cookiecutter.cdn}}vt/xterm.js">
-    <link rel="prefetch" href="{{cookiecutter.cdn}}vt/xterm-addon-image.js">
-    <link rel="prefetch" href="{{cookiecutter.cdn}}vt/xterm-addon-image.js">
+    <link rel="prefetch" href="https://pygame-web.github.io/archives/0.8/pythonrc.py">
+    <link rel="prefetch" href="https://pygame-web.github.io/archives/0.8/vt/xterm.js">
+    <link rel="prefetch" href="https://pygame-web.github.io/archives/0.8/vt/xterm-addon-image.js">
+    <link rel="prefetch" href="https://pygame-web.github.io/archives/0.8/vt/xterm-addon-image.js">
 
 
     <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
@@ -341,7 +341,7 @@ config = {
         }
     </style>
 
-    <script src="{{cookiecutter.cdn}}/browserfs.min.js"></script>
+    <script src="https://pygame-web.github.io/archives/0.8//browserfs.min.js"></script>
 
 </head>
 
@@ -401,7 +401,7 @@ frameborder="1"
                 mozallowfullscreen="true"
                 sandbox="allow-same-origin allow-top-navigation allow-scripts allow-pointer-lock"
                 allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
-                src="{{cookiecutter.cdn}}empty.html"
+                src="https://pygame-web.github.io/archives/0.8/empty.html"
                 scrolling="yes">
             </iframe>
         </div>
